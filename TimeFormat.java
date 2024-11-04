@@ -22,9 +22,10 @@ public class TimeFormat {
 		if (minutes < 10) {
 			minuteText = "0" + String.valueOf(minutes);
 		}
-		if (hours > 12) {
+		if (hours >= 12) {
 			suffix = "PM";
-			hours = hours - 12;
+			if (hours != 12)
+				hours = hours - 12;
 		}
 		timeText = hours + ":" + minuteText + " " + suffix;
 		System.out.println(timeText);
