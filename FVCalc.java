@@ -7,7 +7,6 @@ public class FVCalc {
 		double percentageRate = (double) interstRate / 100;
 		int years = Integer.parseInt(args[2]);
 
-		System.out.println(percentageRate);
 		int futureValue = (int) (currentValue * Math.pow((1 + percentageRate), years));
 
 		System.out.println("After " + years + " years, $" + currentValue + " Saved at " + (double) interstRate
